@@ -1,0 +1,116 @@
+html {
+    background: #100a1c;
+    background-image:
+      radial-gradient(50% 30% ellipse at center top, #201e40 0%, rgba(0,0,0,0) 100%),
+      radial-gradient(60% 50% ellipse at center bottom, #261226 0%, #100a1c 100%);
+    background-attachment: fixed;
+    color: #6cacc5;
+  }
+body {
+    color: #6cacc5;
+    font: 300 18px/1.6 "Source Sans Pro",sans-serif;
+    margin: 0;
+    padding: 2em 0 2em;
+    text-align: center;
+    font-weight: 300;
+    margin: 0;
+  }
+  /* Gradient text only on Webkit */
+.warning {
+    background: -webkit-linear-gradient(45deg,  #c97874 10%, #463042 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #8c5059;
+    font-weight: 400;
+    margin: 0 auto ;
+    width:100%;
+    max-width: 12em;
+  }
+.calculator {
+    font-size: 28px;
+    margin: 0 auto;
+    width: 10em;
+  }
+  /* Calculator after dividing by zero */
+
+.viewer {
+    color: #c97874;
+    float: left;
+    line-height: 3em;
+    text-align: right;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 7.5em;
+    height: 3em;
+  }
+#display{
+    border: 0;
+    background: rgba(42,50,113, .28);
+    color: #6cacc5;
+    cursor: pointer;
+    float: left;
+    font: inherit;
+    margin: 0.25em;
+    width: 7em;
+    height: 2em;
+    transition: all 0.5s;
+    }
+input {
+    border: 0;
+    background: rgba(42,50,113, .28);
+    color: #6cacc5;
+    cursor: pointer;
+    float: left;
+    font: inherit;
+    margin: 0.25em;
+    width: 2em;
+    height: 2em;
+    transition: all 0.5s;
+  }
+  /* dropdown menu style*/
+#navbar {
+  border: 0;
+    background: rgba(42,50,113, .28);
+    color: #6cacc5;
+    cursor: pointer;
+    float: left;
+    font: inherit;
+    margin: 0.25em;
+    width: 2em;
+    height: 2em;
+    transition: all 0.5s;
+}
+#navbar:hover, .navbar:focus {
+  background-color: #2980B9;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  height: 13em;
+  position: absolute;
+  background-color:rgba(42,50,113,28);
+  min-width: 7em;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: #6cacc5;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown a:hover {background-color: #ddd;}
+.dropdown-content a:hover {background-color: #ddd;}
+.show {display: block;}
+/* hide the scroll bar in navbar */
+.container {
+  -ms-overflow-style: none;  
+  overflow: -moz-scrollbars-none;  
+}
+.container::-webkit-scrollbar { 
+  display: none;  
+}

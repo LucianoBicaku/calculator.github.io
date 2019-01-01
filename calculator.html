@@ -1,0 +1,181 @@
+<html>
+    <head>
+        <title>Calculator Project</title>
+        <link rel="stylesheet" type="text/CSS" href="calculator.css">
+        <script src="calculator.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+<body>
+    <h1>JavaScript Calculator</h1>
+    <div id="demo2"><p class="warning">Standart Calculator</p></div>
+    <div id="complete2" style="display:none;">
+        <div id="standart-p">
+            <p class="warning">Standart Calculator</p>
+        </div>
+
+        <div id="programming-p">
+            <p class="warning">Programming Calculator<br>Default calculations are in decimal</p>
+        </div>
+
+        <div id="length-p">
+            <p class="warning">Length Calculator<br>Default calculations<br> are in m.</p>
+        </div>
+
+        <div id="other-p">
+            <p class="warning">Math functions</p>
+        </div>
+    </div>
+
+    <div id="calculator" class="calculator">
+        <form name="case">
+            <input type="button" onclick="myFunction()" id="navbar" value="☰">        
+                <div id="myDropdown" class="dropdown-content calculator container">
+                    <a onclick="show('standart','standart-p')">Standart</a>
+                    <a onclick="show('programming','programming-p')">Programming</a>
+                    <a onclick="show('length','length-p')">Length</a>
+                    <a onclick="show('other','other-p')">Math functions</a>
+                </div>
+            <input id="display" class="viewer" value="">
+            <div id="demo">
+                <input type="button" value="C" onclick="runC()">
+                <input type="button" value="&radic;" onclick="runsqrt()">
+                <input type="button" value="x³" onclick="runpow3()">
+                <input type="button" value="1/x" onclick="rundivx()">
+
+                <input type="button" value="1" onclick="run1()">
+                <input type="button" value="2" onclick="run2()">
+                <input type="button" value="3" onclick="run3()">
+                <input type="button" value="+" onclick="runPlus()">
+
+                <input type="button" value="4" onclick="run4()">
+                <input type="button" value="5" onclick="run5()">
+                <input type="button" value="6" onclick="run6()">
+                <input type="button" value="-" onclick="runMinus()" >
+
+                <input type="button" value="7" onclick="run7()">
+                <input type="button" value="8" onclick="run8()">
+                <input type="button" value="9" onclick="run9()">
+                <input type="button" value="/" onclick="runDivide()" >
+    
+                <input type="button" value="0" onclick="run0()">
+                <input type="button" value="&plusmn" onclick="plsmin()">
+                <input type="button" value="*" onclick="runMultiply()">
+            
+                <input type="button" value="=" onclick="runEquals()">
+            </div>
+            <!--The parf of calculator we don't see-->
+            <div id="complete" style="display:none;">
+                <!--Standar calculator-->
+                <div id="standart">
+                    <input type="button" value="C" onclick="runC()">
+                    <input type="button" value="&radic;" onclick="runsqrt()">
+                    <input type="button" value="x³" onclick="runpow3()">
+                    <input type="button" value="1/x" onclick="rundivx()">
+    
+                    <input type="button" value="1" onclick="run1()">
+                    <input type="button" value="2" onclick="run2()">
+                    <input type="button" value="3" onclick="run3()">
+                    <input type="button" value="+" onclick="runPlus()">
+    
+                    <input type="button" value="4" onclick="run4()">
+                    <input type="button" value="5" onclick="run5()">
+                    <input type="button" value="6" onclick="run6()">
+                    <input type="button" value="-" onclick="runMinus()" >
+    
+                    <input type="button" value="7" onclick="run7()">
+                    <input type="button" value="8" onclick="run8()">
+                    <input type="button" value="9" onclick="run9()">
+                    <input type="button" value="/" onclick="runDivide()" >
+        
+                    <input type="button" value="0" onclick="run0()">
+                    <input type="button" value="&plusmn" onclick="plsmin()">
+                    <input type="button" value="*" onclick="runMultiply()">
+                
+                    <input type="button" value="=" onclick="runEquals()">
+                </div>
+                <!--Programmer calculator-->
+                <div id="programming">
+                    <input type="button" value="Hex" onclick="runhex()">
+                    <input type="button" value="Dec" onclick="rundec()">
+                    <input type="button" value="Oct" onclick="runoct()">
+                    <input type="button" value="Bin" onclick="runbin()">
+    
+                    <input type="button" value="1" onclick="run1()">
+                    <input type="button" value="2" onclick="run2()">
+                    <input type="button" value="3" onclick="run3()">
+                    <input type="button" value="+" onclick="runPlus()">
+    
+                    <input type="button" value="4" onclick="run4()">
+                    <input type="button" value="5" onclick="run5()">
+                    <input type="button" value="6" onclick="run6()">
+                    <input type="button" value="-" onclick="runMinus()" >
+    
+                    <input type="button" value="7" onclick="run7()">
+                    <input type="button" value="8" onclick="run8()">
+                    <input type="button" value="9" onclick="run9()">
+                    <input type="button" value="/" onclick="runDivide()" >
+        
+                    <input type="button" value="C" onclick="runC()">
+                    <input type="button" value="0" onclick="run0()">
+                    <input type="button" value="=" onclick="runEquals()">
+                    <input type="button" value="*" onclick="runMultiply()">
+                </div>
+                <!--Currency calculator-->
+                <div id="length">
+                    <input type="button" value="mm" onclick="runmilm()">
+                    <input type="button" value="cm" onclick="runcenm()">
+                    <input type="button" value="dm" onclick="rundecm()">
+                    <input type="button" value="km" onclick="runkilm()">
+    
+                    <input type="button" value="1" onclick="run1()">
+                    <input type="button" value="2" onclick="run2()">
+                    <input type="button" value="3" onclick="run3()">
+                    <input type="button" value="+" onclick="runPlus()">
+    
+                    <input type="button" value="4" onclick="run4()">
+                    <input type="button" value="5" onclick="run5()">
+                    <input type="button" value="6" onclick="run6()">
+                    <input type="button" value="-" onclick="runMinus()" >
+    
+                    <input type="button" value="7" onclick="run7()">
+                    <input type="button" value="8" onclick="run8()">
+                    <input type="button" value="9" onclick="run9()">
+                    <input type="button" value="/" onclick="runDivide()" >
+        
+                    <input type="button" value="C" onclick="runC()">
+                    <input type="button" value="0" onclick="run0()">
+                    <input type="button" value="=" onclick="runEquals()">
+                    <input type="button" value="*" onclick="runMultiply()">
+                </div>
+                <!--Other functions calculator-->
+                <div id="other">
+                    <input type="button" value="sin" onclick="runsin()"  >
+                    <input type="button" value="cos" onclick="runcos()">
+                    <input type="button" value="tg" onclick="runtg()">
+                    <input type="button" value="cotg" onclick="runcotg()">
+
+                    <input type="button" value="asin" onclick="runasin()">
+                    <input type="button" value="acos" onclick="runacos()">
+                    <input type="button" value="atg" onclick="runatg()">
+                    <input type="button" value="acot" onclick="runacot()">
+
+                    <input type="button" value="Deg" onclick="runDeg()">
+                    <input type="button" value="Rad" onclick="runRad()">
+                    <input type="button" value="Abs" onclick="runAbs()">
+                    <input type="button" value="&#960" onclick="runPI()" >
+
+                    <input type="button" value="e" onclick="runE()" >
+                    <input type="button" value="Exp" onclick="runExp()">
+                    <input type="button" value="log" onclick="runlog()">
+                    <input type="button" value="ln" onclick="runln()">
+        
+                    <input type="button" value="C" onclick="runC()">
+                    <input type="button" value="1/&#960" onclick="run1pi()">
+                    <input type="button" value="1/ln" onclick="run1ln()">
+                    <input type="button" value="1/e" onclick="run1e()">
+                </div>    
+            </div>
+        </form>
+</div>
+</body>
+</html>
